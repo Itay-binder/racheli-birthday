@@ -17,6 +17,7 @@ window.addEventListener('load', () => {
   initSectionBgs();
   initHeroThumbs();
   initBlessingStrips();
+  initPhotoOnlySections();
   initGallery();
   initScrollAnimations();
   initKeyboardNav();
@@ -106,6 +107,56 @@ function initBlessingStrips() {
       img.onclick = () => openPersonLightbox([...photos], i, ph);
       el.appendChild(img);
     });
+  });
+}
+
+// ─────────────────────────────────────────────
+//  PHOTO-ONLY SECTIONS (צפריר / גיא / אורי)
+// ─────────────────────────────────────────────
+function initPhotoOnlySections() {
+  const sections = [
+    { bgId: 'tzafrir-cycle', dotsId: 'tzafrir-cycle-dots', photos: tzafrirPhotos, ph: PLACEHOLDERS.tzafrir },
+    { bgId: 'guy-cycle',     dotsId: 'guy-cycle-dots',     photos: guyPhotos,     ph: PLACEHOLDERS.guy },
+    { bgId: 'uri-cycle',     dotsId: 'uri-cycle-dots',     photos: uriPhotos,     ph: PLACEHOLDERS.uri },
+  ];
+
+  sections.forEach(({ bgId, dotsId, photos, ph }) => {
+    const bg = document.getElementById(bgId);
+    const dotsEl = document.getElementById(dotsId);
+    if (!bg || !photos.length) return;
+
+    let current = 0;
+
+    const imgs = photos.map((src, i) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      img.loading = i === 0 ? 'eager' : 'lazy';
+      img.onerror = () => { img.src = ph(i + 1); img.onerror = null; };
+      if (i === 0) img.classList.add('active');
+      bg.appendChild(img);
+      return img;
+    });
+
+    if (dotsEl) {
+      photos.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'cycle-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+      });
+    }
+
+    function goTo(idx) {
+      imgs[current].classList.remove('active');
+      const allDots = dotsEl ? dotsEl.querySelectorAll('.cycle-dot') : [];
+      if (allDots[current]) allDots[current].classList.remove('active');
+      current = idx;
+      imgs[current].classList.add('active');
+      if (allDots[current]) allDots[current].classList.add('active');
+    }
+
+    setInterval(() => goTo((current + 1) % imgs.length), 3500);
   });
 }
 

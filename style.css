@@ -394,6 +394,94 @@ body {
   border-color: var(--rose-light);
 }
 
+/* ── PHOTO-ONLY SECTIONS (צפריר / גיא / אורי) ── */
+.section-photo-only {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-cycle-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.photo-cycle-bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 1s ease;
+  will-change: opacity;
+}
+
+.photo-cycle-bg img.active {
+  opacity: 1;
+}
+
+.photo-cycle-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.72) 0%,
+    rgba(0,0,0,0.18) 55%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+.photo-cycle-footer {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.photo-cycle-emoji {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.4rem;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.55));
+}
+
+.photo-cycle-name {
+  font-size: clamp(2.2rem, 9vw, 3.5rem);
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.65);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.photo-cycle-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.cycle-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+
+.cycle-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
 /* ── ALBUM SECTION ───────────────────────────── */
 #section-album {
   background: linear-gradient(135deg, #0e0508 0%, #1a0810 100%);
