@@ -26,9 +26,9 @@ const PLACEHOLDERS = {
   scott:   (n) => _ph('סקוט 🐾 ' + n, '#5c4a2a', '#3a2d16'),
 };
 
-// ── תמונות משפחתיות (8 תמונות לגלריה + רקעים) ──────────────────
+// ── תמונות משפחתיות — כל 27 תמונות ──────────────────────────────
 const familyPhotos = [
-  { src: 'images/family-1.jpg',  caption: 'המשפחה' },
+  { src: 'images/family-1.jpg',  caption: '' },
   { src: 'images/family-2.jpg',  caption: '' },
   { src: 'images/family-3.jpg',  caption: '' },
   { src: 'images/family-4.jpg',  caption: '' },
@@ -40,6 +40,21 @@ const familyPhotos = [
   { src: 'images/family-10.jpg', caption: '' },
   { src: 'images/family-11.jpg', caption: '' },
   { src: 'images/family-12.jpg', caption: '' },
+  { src: 'images/family-13.jpg', caption: '' },
+  { src: 'images/family-14.jpg', caption: '' },
+  { src: 'images/family-15.jpg', caption: '' },
+  { src: 'images/family-16.jpg', caption: '' },
+  { src: 'images/family-17.jpg', caption: '' },
+  { src: 'images/family-18.jpg', caption: '' },
+  { src: 'images/family-19.jpg', caption: '' },
+  { src: 'images/family-20.jpg', caption: '' },
+  { src: 'images/family-21.jpg', caption: '' },
+  { src: 'images/family-22.jpg', caption: '' },
+  { src: 'images/family-23.jpg', caption: '' },
+  { src: 'images/family-24.jpg', caption: '' },
+  { src: 'images/family-25.jpg', caption: '' },
+  { src: 'images/family-26.jpg', caption: '' },
+  { src: 'images/family-27.jpg', caption: '' },
 ];
 
 // ── תמונות ברכות (כל מברך — 3 תמונות) ──────────────────────────

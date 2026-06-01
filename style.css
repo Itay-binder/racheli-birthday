@@ -625,7 +625,7 @@ body {
 .scratch-card {
   position: relative;
   width: min(320px, 90vw);
-  height: 200px;
+  height: 260px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 2px rgba(201,68,90,0.3);
@@ -639,19 +639,34 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--rose-pale) 0%, #fff 50%, var(--rose-pale) 100%);
-  gap: 0.6rem;
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.gift-photos {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.gift-img {
+  width: 110px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
 }
 
 .gift-text {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--rose-dark);
   text-align: center;
 }
 
 .gift-sub {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-soft);
   text-align: center;
 }
