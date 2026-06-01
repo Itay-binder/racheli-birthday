@@ -90,6 +90,7 @@ function initBlessingStrips() {
     { id: 'strip-tal',     photos: talPhotos,     ph: PLACEHOLDERS.tal,     offset: 100 },
     { id: 'strip-guy',     photos: guyPhotos,     ph: PLACEHOLDERS.guy,     offset: 200 },
     { id: 'strip-uri',     photos: uriPhotos,     ph: PLACEHOLDERS.uri,     offset: 300 },
+    { id: 'strip-scott',   photos: scottPhotos,   ph: PLACEHOLDERS.scott,   offset: 400 },
   ];
 
   strips.forEach(({ id, photos, ph, offset }) => {

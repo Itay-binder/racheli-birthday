@@ -23,6 +23,7 @@ const PLACEHOLDERS = {
   tal:     (n) => _ph('טל ' + n,     '#7b4fa6', '#4a2070'),
   guy:     (n) => _ph('גיא ' + n,    '#2e7d9e', '#174f66'),
   uri:     (n) => _ph('אורי ' + n,   '#3d8c5a', '#1e5c34'),
+  scott:   (n) => _ph('סקוט 🐾 ' + n, '#5c4a2a', '#3a2d16'),
 };
 
 // ── תמונות משפחתיות (8 תמונות לגלריה + רקעים) ──────────────────
@@ -66,6 +67,12 @@ const uriPhotos = [
   'images/uri-3.jpg',
 ];
 
+const scottPhotos = [
+  'images/scott-1.jpg',
+  'images/scott-2.jpg',
+  'images/scott-3.jpg',
+];
+
 // ── תמונת רקע לכל סקשן ──────────────────────────────────────────
 const sectionBgs = {
   'hero-bg':     'images/family-1.jpg',
@@ -73,5 +80,6 @@ const sectionBgs = {
   'tal-bg':      'images/tal-1.jpg',
   'guy-bg':      'images/guy-1.jpg',
   'uri-bg':      'images/uri-1.jpg',
+  'scott-bg':    'images/scott-1.jpg',
   'album-bg':    'images/family-3.jpg',
 };

@@ -214,9 +214,9 @@ body {
 }
 
 .hero-thumb {
-  width: 70px;
-  height: 95px;
-  border-radius: 10px;
+  width: 90px;
+  height: 120px;
+  border-radius: 12px;
   object-fit: cover;
   border: 2px solid rgba(244,184,196,0.5);
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
@@ -378,9 +378,9 @@ body {
 .blessing-photo-strip::-webkit-scrollbar { display: none; }
 
 .strip-photo {
-  width: 72px;
-  height: 96px;
-  border-radius: 10px;
+  width: 90px;
+  height: 120px;
+  border-radius: 12px;
   object-fit: cover;
   flex-shrink: 0;
   border: 2px solid rgba(255,255,255,0.2);
@@ -751,8 +751,9 @@ body {
 
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 480px) {
-  .hero-family-thumbs { gap: 0.4rem; }
-  .hero-thumb { width: 56px; height: 75px; }
+  .hero-family-thumbs { gap: 0.5rem; }
+  .hero-thumb { width: 80px; height: 107px; }
+  .strip-photo { width: 80px; height: 107px; }
   .photo-grid { grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
   .section-nav { right: 0.75rem; }
 }
