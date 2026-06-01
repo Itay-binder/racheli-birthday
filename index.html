@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>יום הולדת שמח רחלי! 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Stars & Balloons -->
+  <canvas id="stars-canvas"></canvas>
+  <div id="balloons-container"></div>
+  <div id="confetti-container"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-heart">💕</div>
+    <p class="loader-text">טוענת אהבה...</p>
+  </div>
+
+  <!-- Navigation Dots -->
+  <nav class="section-nav" id="section-nav">
+    <div class="nav-dot active" title="פתיחה"></div>
+    <div class="nav-dot" title="ברכה מצפריר"></div>
+    <div class="nav-dot" title="ברכה מטל"></div>
+    <div class="nav-dot" title="ברכה מגיא"></div>
+    <div class="nav-dot" title="ברכה מאורי"></div>
+    <div class="nav-dot" title="אלבום משפחתי"></div>
+    <div class="nav-dot" title="הפתעה"></div>
+  </nav>
+
+  <main id="app">
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section class="section" id="section-hero">
+      <div class="section-photo-bg" id="hero-bg"></div>
+      <div class="hero-inner">
+        <p class="hero-greeting">יום הולדת שמח</p>
+        <h1 class="hero-name">רחלי</h1>
+        <p class="hero-sub">מאמא שאין עוד כמוה — אנחנו אוהבים אותך 💕</p>
+        <div class="hero-family-thumbs animate-on-scroll" id="hero-thumbs"></div>
+        <div class="scroll-hint">
+          <span class="scroll-text">גלגלי למטה</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ צפריר ══════════════════ -->
+    <section class="section section-blessing" id="section-tzafrir">
+      <div class="section-photo-bg" id="tzafrir-bg"></div>
+      <div class="blessing-inner">
+        <div class="blessing-photo-strip" id="strip-tzafrir"></div>
+        <div class="blessing-header animate-on-scroll">
+          <span class="blessing-emoji">💍</span>
+          <h2 class="blessing-from">ברכה מצפריר</h2>
+        </div>
+        <div class="blessing-card animate-on-scroll">
+          <div class="blessing-body">
+            <p>רחלי שלי,</p>
+            <p>
+              שנים שאנחנו ביחד, ועדיין יש ימים שאני מביט בך ומרגיש בדיוק כמו ביום הראשון.
+            </p>
+            <p>
+              את לא רק אישתי — את השותפה שלי לחיים. הבית שלנו עובד בגללך. הילדים שלנו הם מה שהם בגללך. ואני הגבר שאני היום — בגללך.
+            </p>
+            <p>
+              תודה על כל שנות האהבה. על הסבלנות, על ה"בוא נתגבר על זה ביחד", על הצחוקים ועל הרגעים השקטים שרק אנחנו מכירים.
+            </p>
+            <p>
+              תודה שאת שם. תודה שאת את.
+            </p>
+            <p>
+              מאחל לך יום הולדת שמח ועוד שנים רבות של אושר — ביחד.
+            </p>
+            <span class="blessing-signature">אוהב צפריר</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ טל ══════════════════ -->
+    <section class="section section-blessing" id="section-tal">
+      <div class="section-photo-bg" id="tal-bg"></div>
+      <div class="blessing-inner">
+        <div class="blessing-photo-strip" id="strip-tal"></div>
+        <div class="blessing-header animate-on-scroll">
+          <span class="blessing-emoji">🌸</span>
+          <h2 class="blessing-from">ברכה מטל</h2>
+        </div>
+        <div class="blessing-card animate-on-scroll">
+          <div class="blessing-body">
+            <p>אמא שלי,</p>
+            <p>
+              מאז שאני זוכרת את עצמי, את הייתה שם. לא סתם "שם" — את הייתה הנוכחות הכי חמה וחזקה בחיים שלי.
+            </p>
+            <p>
+              ראיתי אותך בונה, דואגת, נותנת מעצמך גם כשלא היה קל. ותמיד עם חיוך.
+            </p>
+            <p>
+              את מלמדת אותי כל יום מה זה לאהוב באמת — בלי לצפות לתמורה, בלי לחשב, רק לתת.
+            </p>
+            <p>
+              אני מקווה שיום אחד אהיה חצי כמוך.
+            </p>
+            <p>
+              יום הולדת שמח, אמא שלי. תמשיכי תמיד להיות בדיוק מי שאת.
+            </p>
+            <span class="blessing-signature">אוהבת טל</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ גיא ══════════════════ -->
+    <section class="section section-blessing" id="section-guy">
+      <div class="section-photo-bg" id="guy-bg"></div>
+      <div class="blessing-inner">
+        <div class="blessing-photo-strip" id="strip-guy"></div>
+        <div class="blessing-header animate-on-scroll">
+          <span class="blessing-emoji">⭐</span>
+          <h2 class="blessing-from">ברכה מגיא</h2>
+        </div>
+        <div class="blessing-card animate-on-scroll">
+          <div class="blessing-body">
+            <p>אמא,</p>
+            <p>
+              מזל טוב! אני יודע שאת אוהבת אותנו יותר ממה שאת יכולה אפילו לבטא במילים — ואנחנו אוהבים אותך בדיוק אותו הדבר.
+            </p>
+            <p>
+              תודה על כל הפעמים שהיית שם בשבילי, על הסבלנות, על הייעוץ שנתת גם כשלא ביקשתי, ועל שתמיד הצלחת להפוך את הכל לפחות מסובך ממה שנראה.
+            </p>
+            <p>
+              מאחל לך שנה מלאה בשמחה, בריאות ורגעים יפים — כי מגיע לך כל טוב.
+            </p>
+            <span class="blessing-signature">אוהב גיא</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ אורי ══════════════════ -->
+    <section class="section section-blessing" id="section-uri">
+      <div class="section-photo-bg" id="uri-bg"></div>
+      <div class="blessing-inner">
+        <div class="blessing-photo-strip" id="strip-uri"></div>
+        <div class="blessing-header animate-on-scroll">
+          <span class="blessing-emoji">🎉</span>
+          <h2 class="blessing-from">ברכה מאורי</h2>
+        </div>
+        <div class="blessing-card animate-on-scroll">
+          <div class="blessing-body">
+            <p>אמא,</p>
+            <p>
+              יום הולדת שמח!!
+            </p>
+            <p>
+              לא קל לכתוב ברכה לאמא שיש לה הכל — אז אני אגיד פשוט: אני אוהב אותך המון, את הכי טובה, ואנחנו הכי מזל שיש לנו אותך.
+            </p>
+            <p>
+              הבית שלנו שונה בגללך. האהבה שלך מורגשת בכל דבר קטן. תודה שאת אמא שלנו — זה הדבר הכי חשוב.
+            </p>
+            <p>
+              שתהיי שמחה ובריאה תמיד, תאהבי ותיאהבי.
+            </p>
+            <span class="blessing-signature">אוהב אורי</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ אלבום ══════════════════ -->
+    <section class="section" id="section-album">
+      <div class="section-photo-bg" id="album-bg"></div>
+      <div class="album-inner">
+        <h2 class="section-heading centered animate-on-scroll">האלבום המשפחתי 📸</h2>
+        <p class="section-sub animate-on-scroll">רגעים שאנחנו אוהבים לזכור</p>
+        <div class="photo-grid" id="photo-grid"></div>
+        <button class="load-more-btn" id="load-more-btn" onclick="loadMorePhotos()">
+          עוד תמונות ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- ══════════════════ כרטיס גירוד ══════════════════ -->
+    <section class="section" id="section-scratch">
+      <div class="scratch-inner">
+        <div class="scratch-icon animate-on-scroll">🎁</div>
+        <h2 class="scratch-title animate-on-scroll">חיכתה לך הפתעה אחת אחרונה</h2>
+        <p class="scratch-hint animate-on-scroll">גרדי כדי לגלות מה קיבלת</p>
+
+        <div class="scratch-card-wrap animate-on-scroll">
+          <div class="scratch-card">
+            <div class="scratch-reveal">
+              <span class="gift-text">🎀 המתנה שלך 🎀</span>
+              <span class="gift-sub">מצפריר, טל, גיא ואורי — באהבה</span>
+            </div>
+            <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+            <div id="scratchOverlay" class="scratch-overlay"></div>
+            <div class="scratch-instruction" id="scratchInstruction">
+              <span class="scratch-instruction-icon">🎁</span>
+              <span class="scratch-instruction-text">גרדי אותי</span>
+            </div>
+          </div>
+        </div>
+
+        <p id="finalMessage" class="final-message hidden">
+          מזל טוב רחלי!<br>
+          אנחנו אוהבים אותך עד הכוכבים ובחזרה 💕
+        </p>
+
+        <button class="back-btn" onclick="scrollToSection(0)">חזרה לתחילת הדף</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════ LIGHTBOX ══════════════════ -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-close" onclick="closeLightbox(event)">✕</button>
+    <button class="lb-prev" onclick="lbPrev(event)">‹</button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption"></p>
+    </div>
+    <button class="lb-next" onclick="lbNext(event)">›</button>
+  </div>
+
+  <script src="photos_data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
