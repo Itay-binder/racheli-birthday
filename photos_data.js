@@ -57,8 +57,8 @@ const familyPhotos = [
   { src: 'images/family-27.jpg', caption: '' },
 ];
 
-// ── אבא (צפריר) — 27 תמונות (זהות לתמונות המשפחה) ──────────────
-const tzafrirPhotos = Array.from({length: 27}, (_, i) => `images/family-${i+1}.jpg`);
+// ── אבא (צפריר) — 27 תמונות אישיות ──────────────────────────────
+const tzafrirPhotos = Array.from({length: 27}, (_, i) => `images/tzafrir-${i+1}.jpg`);
 
 // ── טל — 6 תמונות ────────────────────────────────────────────────
 const talPhotos = Array.from({length: 6}, (_, i) => `images/tal-${i+1}.jpg`);
@@ -69,17 +69,13 @@ const guyPhotos = Array.from({length: 7}, (_, i) => `images/guy-${i+1}.jpg`);
 // ── אורי — 17 תמונות ─────────────────────────────────────────────
 const uriPhotos = Array.from({length: 17}, (_, i) => `images/uri-${i+1}.jpg`);
 
-// ── סקוט — פלייסהולדרים עד שיגיעו תמונות ────────────────────────
-const scottPhotos = [
-  'images/scott-1.jpg',
-  'images/scott-2.jpg',
-  'images/scott-3.jpg',
-];
+// ── סקוט — אין תמונות (רק ברכת טקסט) ───────────────────────────
+const scottPhotos = [];
 
 // ── תמונת רקע לכל סקשן ──────────────────────────────────────────
 const sectionBgs = {
   'hero-bg':     'images/family-1.jpg',
-  'tzafrir-bg':  'images/family-1.jpg',
+  'tzafrir-bg':  'images/tzafrir-1.jpg',
   'tal-bg':      'images/tal-1.jpg',
   'guy-bg':      'images/guy-1.jpg',
   'uri-bg':      'images/uri-1.jpg',
